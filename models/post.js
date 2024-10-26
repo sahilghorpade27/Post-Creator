@@ -8,13 +8,14 @@ const postSchema = mongoose.Schema({
     } ,
     date :{
         type : Date ,
-        defualt : Date.now 
+        default : Date.now 
     } ,
 
     content : String ,
 
     likes : [
-        {type : mongoose.Schema.Types.ObjectId ,
+        {
+            type : mongoose.Schema.Types.ObjectId ,
             ref : "user"
         }
     ]
